@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideas & History — Weldr</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tools/tool.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="logo">⚡ weldr</a>
+    <div class="nav-links">
+      <a href="/#tools">Tools</a>
+      <a href="/#philosophy">Philosophy</a>
+      <a href="https://github.com/vonwao" class="github">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="tool-hero">
+    <div class="tool-hero-content">
+      <div class="tool-badge">📜 Ideas & History</div>
+      <h1>Where Weldr<br>came from.</h1>
+      <p class="tagline">The concepts, experiments, and lessons learned building AI-assisted development tools.</p>
+    </div>
+  </header>
+
+  <section style="max-width: 900px; margin: 0 auto; padding: 4rem 2rem;">
+    <h2>The Origin Story</h2>
+    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">
+      Weldr started as "Mosaic Builder" — an ambitious AI app builder. Some ideas worked beautifully. Others didn't survive contact with reality. Here's what we learned.
+    </p>
+
+    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 3rem;">
+      <h3 style="color: var(--accent);">🏗️ Mosaic Builder (v1)</h3>
+      <p style="color: var(--text-muted); margin: 1rem 0;">The original vision: describe an app in chat, get a running Next.js app with live preview. AI generates everything.</p>
+      
+      <p><strong>What worked:</strong></p>
+      <ul style="color: var(--text-muted); margin-left: 1.5rem;">
+        <li>Live preview via WebContainers — instant feedback</li>
+        <li>Chat-to-code was magical for simple apps</li>
+        <li>Progressive ownership concept was powerful</li>
+      </ul>
+      
+      <p style="margin-top: 1rem;"><strong>What didn't:</strong></p>
+      <ul style="color: var(--text-muted); margin-left: 1.5rem;">
+        <li>Too many restrictions for AI creativity</li>
+        <li>DSL/IR layer was opaque and hard to debug</li>
+        <li>Only worked for CRUD apps — couldn't break out</li>
+        <li>No collaboration features</li>
+      </ul>
+    </div>
+
+    <h2>Concepts Worth Keeping</h2>
+
+    <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+      
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+        <h3>🔐 Progressive Ownership</h3>
+        <p style="color: var(--text-muted); margin: 1rem 0;">
+          The insight: AI tools either clobber your code or you lose AI assistance entirely. Progressive ownership is the middle ground.
+        </p>
+        
+        <div style="background: var(--bg-elevated); border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.5rem 0; font-weight: 500;">MANAGED</td>
+              <td style="padding: 0.5rem 0; color: var(--text-muted);">AI controls completely. Can rewrite anytime.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.5rem 0; font-weight: 500;">EXTENDED</td>
+              <td style="padding: 0.5rem 0; color: var(--text-muted);">Mix of AI + custom. Your <code>@custom</code> blocks preserved.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.5rem 0; font-weight: 500;">OWNED</td>
+              <td style="padding: 0.5rem 0; color: var(--text-muted);">You control. AI can read but never overwrite.</td>
+            </tr>
+          </table>
+        </div>
+        
+        <p style="color: var(--green); margin-top: 1rem; font-size: 0.9rem;">
+          ✨ This concept is coming to code-chat as "Protected Files"
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+        <h3>📝 @custom Blocks</h3>
+        <p style="color: var(--text-muted); margin: 1rem 0;">
+          Mark regions of code that AI must never touch. Survives regeneration.
+        </p>
+        
+        <pre class="code-block" style="margin-top: 1rem;"><span class="dim">// AI-generated code above...</span>
+
+<span class="green">// @custom:begin user-validation</span>
+function validateUser(user) {
+  <span class="dim">// Your custom logic here</span>
+  <span class="dim">// AI will never touch this</span>
+  return user.role === 'admin' || user.verified;
+}
+<span class="green">// @custom:end</span>
+
+<span class="dim">// AI-generated code below...</span></pre>
+
+        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">
+          The AI understands these markers and works around them. Your business logic stays yours.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+        <h3>📋 The Weldr Protocol</h3>
+        <p style="color: var(--text-muted); margin: 1rem 0;">
+          A formal, machine-enforceable system for AI-safe software evolution.
+        </p>
+        
+        <p><strong>Key invariants:</strong></p>
+        <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-top: 0.5rem;">
+          <li><strong>No silent clobber:</strong> AI can never overwrite owned surfaces</li>
+          <li><strong>Marker integrity:</strong> @custom blocks must stay intact</li>
+          <li><strong>Loud failures:</strong> Blocked operations explain why</li>
+          <li><strong>Staleness tracking:</strong> Know when your forks are outdated</li>
+        </ul>
+        
+        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">
+          This was perhaps over-engineered for an app builder, but the core ideas apply to any AI coding tool.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+        <h3>🎯 Surface-Level Granularity</h3>
+        <p style="color: var(--text-muted); margin: 1rem 0;">
+          Ownership doesn't have to be file-level. You can own:
+        </p>
+        
+        <ul style="color: var(--text-muted); margin-left: 1.5rem;">
+          <li><code>FILE:components/Button.tsx</code> — whole file</li>
+          <li><code>BLOCK:api.ts:@custom:auth</code> — just one section</li>
+          <li><code>ROUTE:/api/billing/*</code> — all billing routes</li>
+          <li><code>ENTITY:User</code> — the User model everywhere</li>
+        </ul>
+        
+        <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">
+          Fine-grained control means you can let AI handle boilerplate while protecting critical business logic.
+        </p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 4rem;">What We're Building Now</h2>
+    
+    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">
+      The current Weldr tools are simpler and more focused:
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <a href="tools/sync.html" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: block;">
+        <h4 style="margin-bottom: 0.5rem;">weld-sync</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">File sync + auto-merge. Trunk-based development for teams.</p>
+      </a>
+      
+      <a href="tools/code-chat.html" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: block;">
+        <h4 style="margin-bottom: 0.5rem;">code-chat</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">AI coding in the browser. Progressive ownership coming soon.</p>
+      </a>
+      
+      <a href="tools/next-task.html" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: block;">
+        <h4 style="margin-bottom: 0.5rem;">next-task</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">AI task loop. Define work, let AI execute.</p>
+      </a>
+    </div>
+
+    <h2 style="margin-top: 4rem;">Future Ideas</h2>
+    
+    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+      Concepts we're exploring for future tools:
+    </p>
+
+    <ul style="color: var(--text-muted); line-height: 2;">
+      <li><strong>weld-review</strong> — AI code review without PR ceremony. Suggestions in Slack, not GitHub.</li>
+      <li><strong>weld-onboard</strong> — AI that learns your codebase and answers questions for new hires.</li>
+      <li><strong>weld-docs</strong> — Auto-generate documentation from code + chat history.</li>
+      <li><strong>Ownership manifest</strong> — A YAML file that declares what AI can/can't touch, shared across tools.</li>
+    </ul>
+
+  </section>
+
+  <section class="cta-section">
+    <h2>Got ideas?</h2>
+    <p>We're building in public. Come hang out.</p>
+    <div class="cta-buttons">
+      <a href="https://discord.gg/weldr" class="btn btn-primary">Join Discord</a>
+      <a href="https://twitter.com/vonwao" class="btn btn-secondary">Follow on X</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Part of the <a href="/">Weldr</a> ecosystem</p>
+    </div>
+  </footer>
+</body>
+</html>

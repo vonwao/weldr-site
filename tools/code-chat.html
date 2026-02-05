@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code-chat — Your CEO can code now.</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="tool.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="logo">⚡ weldr</a>
+    <div class="nav-links">
+      <a href="/#tools">Tools</a>
+      <a href="/#philosophy">Philosophy</a>
+      <a href="https://github.com/vonwao/code-chat" class="github">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="tool-hero">
+    <div class="tool-hero-content">
+      <div class="tool-badge">💬 code-chat</div>
+      <h1>Your CEO can<br>code now.</h1>
+      <p class="tagline">AI-powered code editing in the browser. Non-technical founders ship features without bothering the CTO. Technical founders move 10x faster.</p>
+      <div class="cta-buttons">
+        <a href="https://github.com/vonwao/code-chat" class="btn btn-primary">View on GitHub →</a>
+        <a href="https://github.com/vonwao/code-chat#quick-start" class="btn btn-secondary">Quick Start</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="demo-section">
+    <h2>See It In Action</h2>
+    <div class="demo-video">
+      <div class="demo-placeholder">
+        <p>🎬 Demo video coming soon</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Imagine: "Make the button blue" → instant preview</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="use-cases">
+    <h2>Who Uses This</h2>
+    
+    <div class="cases-grid">
+      <div class="case">
+        <h3>👔 Non-technical CEO</h3>
+        <p>"I wanted to change the pricing page. Instead of writing a ticket and waiting 3 days, I just asked code-chat. Done in 2 minutes."</p>
+      </div>
+      
+      <div class="case">
+        <h3>👩‍💻 Solo founder</h3>
+        <p>"I'm technical but context-switching is expensive. Now I describe features in plain English and review the diff. 10x faster."</p>
+      </div>
+      
+      <div class="case">
+        <h3>🎨 Designer who codes</h3>
+        <p>"I can finally implement my own designs without waiting for a dev. CSS changes, layout tweaks — all through chat."</p>
+      </div>
+      
+      <div class="case">
+        <h3>🧑‍🤝‍🧑 CEO + CTO team</h3>
+        <p>"CEO uses code-chat for quick fixes. I use VS Code for deep work. weld-sync keeps us in sync. Magic."</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <h3>💬 Chat interface</h3>
+        <p>Describe what you want in plain English. Claude understands context and makes intelligent edits.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>👁️ Live preview</h3>
+        <p>See changes instantly in the preview pane. No refresh needed.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>📁 Multi-project</h3>
+        <p>Switch between projects. Each has its own sandbox and permissions.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🔐 Access control</h3>
+        <p>Per-user API keys with project permissions. CEO gets marketing site, intern gets sandbox.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🌐 Remote access</h3>
+        <p>Cloudflare Tunnel or Tailscale. Edit from your phone. Share with teammates.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🔄 weld-sync integration</h3>
+        <p>Changes sync to your CTO's VS Code in real-time. Everyone stays in sync.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Open in browser</h3>
+        <p>Navigate to your code-chat URL. Enter your API key.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Describe the change</h3>
+        <p>"Add a testimonials section to the homepage with 3 cards."</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>AI makes edits</h3>
+        <p>Claude Code edits the files. You see changed files and diffs.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Preview & iterate</h3>
+        <p>See the result. Ask for adjustments. Ship when happy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quickstart">
+    <h2>Quick Start</h2>
+    
+    <pre class="code-block"><span class="dim"># Clone and install</span>
+git clone https://github.com/vonwao/code-chat
+cd code-chat
+npm install
+
+<span class="dim"># Configure your project in config.json</span>
+{
+  "port": 3333,
+  "auth": { "enabled": true, "keys": { ... } },
+  "projects": [{
+    "id": "myapp",
+    "name": "My App",
+    "path": "/path/to/project",
+    "devCommand": "npm run dev",
+    "previewPort": 3001
+  }]
+}
+
+<span class="dim"># Start the server</span>
+npm start
+
+<span class="dim"># Open in browser</span>
+<span class="green">→</span> http://localhost:3333</pre>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to let everyone ship?</h2>
+    <p>Open source. Self-hosted. Your code stays on your server.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/vonwao/code-chat" class="btn btn-primary">Get Started →</a>
+      <a href="https://github.com/vonwao/code-chat/tree/main/docs" class="btn btn-secondary">Read the Docs</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Part of the <a href="/">Weldr</a> ecosystem</p>
+    </div>
+  </footer>
+</body>
+</html>

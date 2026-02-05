@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weld-sync — Everyone on main. Always.</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="tool.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="logo">⚡ weldr</a>
+    <div class="nav-links">
+      <a href="/#tools">Tools</a>
+      <a href="/#philosophy">Philosophy</a>
+      <a href="https://github.com/vonwao/weldr-v3" class="github">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="tool-hero">
+    <div class="tool-hero-content">
+      <div class="tool-badge">🔄 weld-sync</div>
+      <h1>Everyone on main.<br>Always.</h1>
+      <p class="tagline">Auto-commit. Auto-merge. Real-time sync across your team. No branches, no PRs, no merge conflicts. Just ship.</p>
+      <div class="cta-buttons">
+        <a href="https://github.com/vonwao/weldr-v3" class="btn btn-primary">View on GitHub →</a>
+        <a href="https://github.com/vonwao/weldr-v3/blob/main/docs/QUICKSTART.md" class="btn btn-secondary">Quick Start</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>You edit files</h3>
+        <p>Use VS Code, Cursor, Vim — any editor you want. weld-sync watches silently.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Auto-commit</h3>
+        <p>After 5 seconds of quiet, changes are committed to jj (Jujutsu). Your work is always versioned.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Sync to team</h3>
+        <p>Changes push to the sync server. Your teammates' daemons pull them down. Everyone stays in sync.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Auto-merge</h3>
+        <p>jj automatically rebases changes. Non-overlapping edits merge clean. Conflicts are surfaced but don't block.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="comparison">
+    <h2>Git Workflow vs. Weldr Workflow</h2>
+    
+    <div class="compare-grid">
+      <div class="compare-card old">
+        <h3>❌ Traditional Git</h3>
+        <ol>
+          <li>Create feature branch</li>
+          <li>Make changes</li>
+          <li>Commit (maybe forget)</li>
+          <li>Push branch</li>
+          <li>Open pull request</li>
+          <li>Wait for review</li>
+          <li>Address comments</li>
+          <li>Resolve merge conflicts</li>
+          <li>Squash and merge</li>
+          <li>Delete branch</li>
+          <li>Pull main</li>
+        </ol>
+        <p class="compare-time">⏱️ 30 min - 3 days</p>
+      </div>
+      
+      <div class="compare-card new">
+        <h3>✅ Weldr</h3>
+        <ol>
+          <li>Make changes</li>
+          <li>Done.</li>
+        </ol>
+        <p class="compare-time">⏱️ Instant</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <h3>🔄 Real-time sync</h3>
+        <p>Changes propagate to teammates in seconds. No manual pull required.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🧠 Smart merging</h3>
+        <p>Powered by jj (Jujutsu). Line-level tracking means non-overlapping edits always merge clean.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>⏪ Time travel</h3>
+        <p>Full operation history. Undo anything. Restore any point. Never lose work.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🤖 AI-friendly</h3>
+        <p>AI agents are just another client. Their commits auto-merge with yours.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>📝 Editor agnostic</h3>
+        <p>VS Code, Cursor, Vim, Emacs — whatever you use, weldr watches.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🔌 Git compatible</h3>
+        <p>jj uses Git storage. Push to GitHub when ready. Best of both worlds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quickstart">
+    <h2>Quick Start</h2>
+    
+    <pre class="code-block"><span class="dim"># Install</span>
+npm install -g weldr
+
+<span class="dim"># Initialize in your project</span>
+cd my-project
+weldr init
+
+<span class="dim"># Start the daemon (watches files, auto-commits)</span>
+weldr daemon
+
+<span class="dim"># Connect to team sync server</span>
+weldr daemon --sync-url wss://your-server.com --sync-token your-token
+
+<span class="dim"># Check status anytime</span>
+weldr status
+<span class="green">✓</span> Watching 142 files
+<span class="green">✓</span> Sync: connected
+<span class="green">✓</span> Last sync: 3 seconds ago</pre>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to ditch branches?</h2>
+    <p>Open source. Self-hosted. Your code, your server.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/vonwao/weldr-v3" class="btn btn-primary">Get Started →</a>
+      <a href="https://github.com/vonwao/weldr-v3/tree/main/docs" class="btn btn-secondary">Read the Docs</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Part of the <a href="/">Weldr</a> ecosystem</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+/* === Tool Page Styles === */
+
+.tool-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 4rem 4rem;
+  text-align: center;
+}
+
+.tool-hero-content {
+  max-width: 800px;
+}
+
+.tool-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tool-hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tool-hero .tagline {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tool-hero .cta-buttons {
+  justify-content: center;
+}
+
+/* === How It Works === */
+.how-it-works {
+  background: var(--bg-elevated);
+  border-radius: 24px;
+  margin: 2rem 4rem;
+  max-width: calc(1400px - 8rem);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* === Comparison === */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.compare-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.compare-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.compare-card ol {
+  margin-left: 1.5rem;
+  color: var(--text-muted);
+}
+
+.compare-card li {
+  padding: 0.3rem 0;
+}
+
+.compare-card.old {
+  border-color: #ef4444;
+}
+
+.compare-card.old h3 {
+  color: #ef4444;
+}
+
+.compare-card.new {
+  border-color: var(--green);
+}
+
+.compare-card.new h3 {
+  color: var(--green);
+}
+
+.compare-time {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-weight: 500;
+}
+
+/* === Features Grid === */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.feature h3 {
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* === Quick Start === */
+.quickstart {
+  text-align: center;
+}
+
+.quickstart .code-block {
+  text-align: left;
+  max-width: 700px;
+  margin: 3rem auto 0;
+}
+
+/* === Use Cases === */
+.use-cases {
+  background: var(--bg-elevated);
+  border-radius: 24px;
+  margin: 2rem 4rem;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.case {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.case h3 {
+  margin-bottom: 0.5rem;
+}
+
+.case p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* === Demo === */
+.demo-section {
+  text-align: center;
+}
+
+.demo-video {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.demo-video img,
+.demo-video video {
+  width: 100%;
+  display: block;
+}
+
+.demo-placeholder {
+  background: var(--bg-card);
+  padding: 4rem;
+  color: var(--text-muted);
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .tool-hero {
+    padding: 6rem 2rem 2rem;
+    min-height: auto;
+  }
+  
+  .tool-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .how-it-works,
+  .use-cases {
+    margin: 2rem 1rem;
+    border-radius: 16px;
+  }
+}

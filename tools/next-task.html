@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>next-task — Ship while you sleep.</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="tool.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="logo">⚡ weldr</a>
+    <div class="nav-links">
+      <a href="/#tools">Tools</a>
+      <a href="/#philosophy">Philosophy</a>
+      <a href="https://github.com/vonwao" class="github">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="tool-hero">
+    <div class="tool-hero-content">
+      <div class="tool-badge">⚡ next-task</div>
+      <h1>Ship while<br>you sleep.</h1>
+      <p class="tagline">Define tasks in a markdown file. Run `next-task`. Wake up to commits, tests, and features. Your async AI workforce.</p>
+      <div class="cta-buttons">
+        <a href="#quickstart" class="btn btn-primary">Get Started →</a>
+        <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="demo-section">
+    <h2>The Loop</h2>
+    <pre class="code-block" style="max-width: 800px; margin: 3rem auto 0;"><span class="dim">$</span> next-task run --loop
+
+<span class="yellow">→</span> Reading TASKS.md...
+<span class="yellow">→</span> Found 12 tasks (8 todo, 4 done)
+
+<span class="yellow">→</span> T9: Add rate limiting to API
+<span class="dim">  Spawning Claude Code...</span>
+<span class="dim">  Thinking...</span>
+<span class="dim">  Editing src/middleware/rateLimit.ts...</span>
+<span class="dim">  Editing src/routes/api.ts...</span>
+<span class="dim">  Running tests...</span>
+<span class="green">✓</span> T9 complete. 2 files changed. Tests passing.
+<span class="green">✓</span> Committed: "feat: add rate limiting to API"
+
+<span class="yellow">→</span> T10: Write API documentation
+<span class="dim">  Spawning Claude Code...</span>
+<span class="dim">  Thinking...</span>
+<span class="dim">  Creating docs/API.md...</span>
+<span class="green">✓</span> T10 complete. 1 file created.
+<span class="green">✓</span> Committed: "docs: add API documentation"
+
+<span class="yellow">→</span> T11: Add user avatar upload
+<span class="dim">  Spawning Claude Code...</span>
+<span class="dim">  Thinking...</span>
+<span class="dim">  ...</span>
+
+<span class="dim">[3 hours later]</span>
+
+<span class="green">✓</span> 8 tasks completed
+<span class="green">✓</span> 23 files changed
+<span class="green">✓</span> All tests passing
+<span class="green">✓</span> Ready for review</pre>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Write TASKS.md</h3>
+        <p>Define tasks in a simple markdown file. Status, description, context.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Run next-task</h3>
+        <p>It finds the next todo, spawns Claude Code, watches it work.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>AI executes</h3>
+        <p>Claude reads the codebase, makes changes, runs tests. Fully autonomous.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Loop or stop</h3>
+        <p>Mark complete, move to next. Or stop when a task fails for human review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <h3>📝 Markdown-native</h3>
+        <p>Tasks live in TASKS.md. Human-readable. Git-trackable. No webapp needed.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🔄 Loop mode</h3>
+        <p>Keep going until all tasks done or one fails. Perfect for overnight runs.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🧪 Test awareness</h3>
+        <p>Runs your test suite after each task. Stops on failure.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>📊 Progress tracking</h3>
+        <p>See what's done, what's in progress, what's blocked. Real-time status.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>🔌 Coding agent agnostic</h3>
+        <p>Works with Claude Code, Codex, or any CLI-based coding agent.</p>
+      </div>
+      
+      <div class="feature">
+        <h3>💾 Auto-commit</h3>
+        <p>Each completed task is committed with a meaningful message. Clean history.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="use-cases">
+    <h2>Use Cases</h2>
+    
+    <div class="cases-grid">
+      <div class="case">
+        <h3>🌙 Overnight builds</h3>
+        <p>Define tomorrow's features before bed. Wake up to working code.</p>
+      </div>
+      
+      <div class="case">
+        <h3>🚀 MVP sprints</h3>
+        <p>List 20 features. Let AI knock them out while you do founder stuff.</p>
+      </div>
+      
+      <div class="case">
+        <h3>🧹 Tech debt</h3>
+        <p>"Refactor X. Add tests to Y. Update deprecated Z." Queue it all up.</p>
+      </div>
+      
+      <div class="case">
+        <h3>📚 Documentation</h3>
+        <p>"Document all API endpoints. Add JSDoc to all functions." Done by morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quickstart" class="quickstart">
+    <h2>Quick Start</h2>
+    
+    <pre class="code-block"><span class="dim"># Create TASKS.md in your project</span>
+cat > TASKS.md << 'EOF'
+# Tasks
+
+## T1: Add user authentication [done]
+- Implement JWT-based auth
+- Add login/logout endpoints
+
+## T2: Add rate limiting [todo]
+- Limit API to 100 req/min per user
+- Return 429 when exceeded
+
+## T3: Add API documentation [todo]
+- Document all endpoints in docs/API.md
+- Include examples
+EOF
+
+<span class="dim"># Run next task</span>
+next-task run
+
+<span class="dim"># Or run until all done</span>
+next-task run --loop
+
+<span class="dim"># Check status</span>
+next-task status
+<span class="green">✓</span> T1: Add user authentication [done]
+<span class="yellow">→</span> T2: Add rate limiting [in-progress]
+<span class="dim">○</span> T3: Add API documentation [todo]</pre>
+  </section>
+
+  <section class="comparison">
+    <h2>AI Coding: Old Way vs. New Way</h2>
+    
+    <div class="compare-grid">
+      <div class="compare-card old">
+        <h3>❌ Copy-paste prompting</h3>
+        <ol>
+          <li>Open ChatGPT/Claude</li>
+          <li>Describe what you want</li>
+          <li>Copy code from response</li>
+          <li>Paste into editor</li>
+          <li>Fix the errors</li>
+          <li>Go back and forth 5 times</li>
+          <li>Manually commit</li>
+          <li>Repeat for next feature</li>
+        </ol>
+        <p class="compare-time">⏱️ 30 min per feature</p>
+      </div>
+      
+      <div class="compare-card new">
+        <h3>✅ next-task</h3>
+        <ol>
+          <li>List features in TASKS.md</li>
+          <li>Run next-task --loop</li>
+          <li>Go do something else</li>
+          <li>Review commits when done</li>
+        </ol>
+        <p class="compare-time">⏱️ 5 min (your time)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready for async AI?</h2>
+    <p>Your AI junior dev. Works nights and weekends.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/vonwao" class="btn btn-primary">Get Started →</a>
+      <a href="/#tools" class="btn btn-secondary">See All Tools</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Part of the <a href="/">Weldr</a> ecosystem</p>
+    </div>
+  </footer>
+</body>
+</html>

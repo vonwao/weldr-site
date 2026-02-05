@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weldr — Tools for Teams That Ship</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="logo">⚡ weldr</a>
+    <div class="nav-links">
+      <a href="#tools">Tools</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="https://github.com/vonwao" class="github">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Small teams.<br>Big moves.</h1>
+      <p class="tagline">Open source tools for startups that ship fast, break rules, and don't have time for enterprise ceremony.</p>
+      <div class="cta-buttons">
+        <a href="#tools" class="btn btn-primary">See the Tools →</a>
+        <a href="#philosophy" class="btn btn-secondary">Read the Manifesto</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <pre class="code-block"><span class="dim">$</span> weldr sync
+<span class="green">✓</span> Connected to team
+<span class="green">✓</span> 3 changes pulled
+<span class="green">✓</span> Auto-merged
+
+<span class="dim">$</span> next-task run
+<span class="yellow">→</span> T14: Add user auth
+<span class="dim">  thinking...</span>
+<span class="green">✓</span> Done. 4 files changed.
+<span class="green">✓</span> Tests passing.
+<span class="yellow">→</span> T15: Add rate limiting
+<span class="dim">  thinking...</span></pre>
+    </div>
+  </header>
+
+  <section id="tools" class="tools-section">
+    <h2>The Tools</h2>
+    <p class="section-subtitle">Everything you need. Nothing you don't.</p>
+    
+    <div class="tools-grid">
+      <a href="tools/sync.html" class="tool-card">
+        <div class="tool-icon">🔄</div>
+        <h3>weld-sync</h3>
+        <p class="tool-tagline">Everyone on main. Always.</p>
+        <p class="tool-desc">Auto-commit, auto-merge, real-time sync. No branches. No PRs. No waiting. Just ship.</p>
+        <span class="tool-link">Learn more →</span>
+      </a>
+
+      <a href="tools/code-chat.html" class="tool-card">
+        <div class="tool-icon">💬</div>
+        <h3>code-chat</h3>
+        <p class="tool-tagline">Your CEO can code now.</p>
+        <p class="tool-desc">AI-powered code editing in the browser. Non-technical founders can ship features without bothering the CTO.</p>
+        <span class="tool-link">Learn more →</span>
+      </a>
+
+      <a href="tools/next-task.html" class="tool-card">
+        <div class="tool-icon">⚡</div>
+        <h3>next-task</h3>
+        <p class="tool-tagline">Ship while you sleep.</p>
+        <p class="tool-desc">Define tasks. Let AI execute them. Wake up to commits, tests, and progress. The async workforce.</p>
+        <span class="tool-link">Learn more →</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="philosophy" class="philosophy-section">
+    <h2>The Philosophy</h2>
+    <div class="manifesto">
+      <div class="manifesto-item">
+        <h3>🚫 No PRs for 5-person teams</h3>
+        <p>Code review is great. PR ceremony is not. If you trust your team enough to hire them, trust them to push to main.</p>
+      </div>
+      
+      <div class="manifesto-item">
+        <h3>🤖 AI is a teammate, not a tool</h3>
+        <p>Your AI agent commits code, runs tests, and ships features. It's not autocomplete — it's a junior dev that never sleeps.</p>
+      </div>
+      
+      <div class="manifesto-item">
+        <h3>⚡ Speed > Ceremony</h3>
+        <p>Jira tickets. Sprint planning. Retrospectives. All great for enterprises. Poison for startups. Move fast, learn faster.</p>
+      </div>
+      
+      <div class="manifesto-item">
+        <h3>🔓 Open source, own your stack</h3>
+        <p>No vendor lock-in. No surprise pricing. No "please contact sales." Fork it, run it, own it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience-section">
+    <h2>Who This Is For</h2>
+    <div class="audience-grid">
+      <div class="audience-card yes">
+        <h3>✅ Perfect for</h3>
+        <ul>
+          <li>2-10 person startups</li>
+          <li>Technical co-founders + non-technical CEOs</li>
+          <li>Teams that trust each other</li>
+          <li>AI-forward builders</li>
+          <li>People who hate meetings</li>
+        </ul>
+      </div>
+      <div class="audience-card no">
+        <h3>❌ Not for</h3>
+        <ul>
+          <li>Enterprises with compliance requirements</li>
+          <li>Teams that need approval workflows</li>
+          <li>People who love Jira</li>
+          <li>Anyone afraid of pushing to main</li>
+          <li>"But what about SOC 2?"</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to ship?</h2>
+    <p>All tools are open source. Pick what you need.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/vonwao/weldr-v3" class="btn btn-primary">weld-sync on GitHub</a>
+      <a href="https://github.com/vonwao/code-chat" class="btn btn-primary">code-chat on GitHub</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Built with ☕ and AI by <a href="https://twitter.com/vonwao">@vonwao</a></p>
+      <p class="footer-links">
+        <a href="https://github.com/vonwao">GitHub</a> · 
+        <a href="https://discord.gg/weldr">Discord</a> · 
+        <a href="https://twitter.com/vonwao">Twitter</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
